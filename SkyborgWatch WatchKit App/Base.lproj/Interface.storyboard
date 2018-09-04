@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SkyborgWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="DK0-qC-MwW">
+                            <connections>
+                                <action selector="switchChange:" destination="AgC-eL-Hgc" id="eq7-wT-Wx4"/>
+                            </connections>
+                        </switch>
+                        <group width="1" alignment="left" layout="vertical" id="ezD-b5-XqB">
+                            <items>
+                                <label width="136" alignment="left" text="Orders" id="tCQ-9G-w5E"/>
+                                <label width="136" alignment="left" text="Units" id="MS1-P3-JZE"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="fQC-dP-F6M">
+                            <items>
+                                <label width="136" alignment="left" text="Sales" id="Gw3-EZ-2nv"/>
+                                <label width="136" alignment="left" text="Profit" id="Z3P-nG-nSn"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="orders" destination="tCQ-9G-w5E" id="kGR-ul-1bA"/>
+                        <outlet property="profit" destination="Z3P-nG-nSn" id="A5h-ov-xJ1"/>
+                        <outlet property="sales" destination="Gw3-EZ-2nv" id="PDk-8K-YC9"/>
+                        <outlet property="units" destination="MS1-P3-JZE" id="Yyh-D2-ES2"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

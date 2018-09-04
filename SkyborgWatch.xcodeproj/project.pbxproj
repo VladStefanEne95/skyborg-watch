@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		457197C5213D242000ACA58A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457197C4213D242000ACA58A /* AppDelegate.swift */; };
+		457197C7213D242000ACA58A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457197C6213D242000ACA58A /* ViewController.swift */; };
+		457197CA213D242000ACA58A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457197C8213D242000ACA58A /* Main.storyboard */; };
+		457197CC213D242100ACA58A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457197CB213D242100ACA58A /* Assets.xcassets */; };
+		457197CF213D242100ACA58A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457197CD213D242100ACA58A /* LaunchScreen.storyboard */; };
+		457197D4213D242200ACA58A /* SkyborgWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 457197D3213D242200ACA58A /* SkyborgWatch WatchKit App.app */; };
+		457197DA213D242200ACA58A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457197D8213D242200ACA58A /* Interface.storyboard */; };
+		457197DC213D242200ACA58A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457197DB213D242200ACA58A /* Assets.xcassets */; };
+		457197E3213D242300ACA58A /* SkyborgWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 457197E2213D242300ACA58A /* SkyborgWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		457197E8213D242300ACA58A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457197E7213D242300ACA58A /* InterfaceController.swift */; };
+		457197EA213D242300ACA58A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457197E9213D242300ACA58A /* ExtensionDelegate.swift */; };
+		457197EC213D242300ACA58A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457197EB213D242300ACA58A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		457197D5213D242200ACA58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 457197B9213D241F00ACA58A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 457197D2213D242200ACA58A;
+			remoteInfo = "SkyborgWatch WatchKit App";
+		};
+		457197E4213D242300ACA58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 457197B9213D241F00ACA58A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 457197E1213D242300ACA58A;
+			remoteInfo = "SkyborgWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		457197F3213D242300ACA58A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				457197E3213D242300ACA58A /* SkyborgWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457197F7213D242300ACA58A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				457197D4213D242200ACA58A /* SkyborgWatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		457197C1213D242000ACA58A /* SkyborgWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyborgWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		457197C4213D242000ACA58A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		457197C6213D242000ACA58A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		457197C9213D242000ACA58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		457197CB213D242100ACA58A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		457197CE213D242100ACA58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		457197D0213D242100ACA58A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457197D3213D242200ACA58A /* SkyborgWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SkyborgWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		457197D9213D242200ACA58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		457197DB213D242200ACA58A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		457197DD213D242200ACA58A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457197E2213D242300ACA58A /* SkyborgWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SkyborgWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		457197E7213D242300ACA58A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		457197E9213D242300ACA58A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		457197EB213D242300ACA58A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		457197ED213D242300ACA58A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		457197BE213D241F00ACA58A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457197DF213D242300ACA58A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		457197B8213D241F00ACA58A = {
+			isa = PBXGroup;
+			children = (
+				457197C3213D242000ACA58A /* SkyborgWatch */,
+				457197D7213D242200ACA58A /* SkyborgWatch WatchKit App */,
+				457197E6213D242300ACA58A /* SkyborgWatch WatchKit Extension */,
+				457197C2213D242000ACA58A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		457197C2213D242000ACA58A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				457197C1213D242000ACA58A /* SkyborgWatch.app */,
+				457197D3213D242200ACA58A /* SkyborgWatch WatchKit App.app */,
+				457197E2213D242300ACA58A /* SkyborgWatch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		457197C3213D242000ACA58A /* SkyborgWatch */ = {
+			isa = PBXGroup;
+			children = (
+				457197C4213D242000ACA58A /* AppDelegate.swift */,
+				457197C6213D242000ACA58A /* ViewController.swift */,
+				457197C8213D242000ACA58A /* Main.storyboard */,
+				457197CB213D242100ACA58A /* Assets.xcassets */,
+				457197CD213D242100ACA58A /* LaunchScreen.storyboard */,
+				457197D0213D242100ACA58A /* Info.plist */,
+			);
+			path = SkyborgWatch;
+			sourceTree = "<group>";
+		};
+		457197D7213D242200ACA58A /* SkyborgWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				457197D8213D242200ACA58A /* Interface.storyboard */,
+				457197DB213D242200ACA58A /* Assets.xcassets */,
+				457197DD213D242200ACA58A /* Info.plist */,
+			);
+			path = "SkyborgWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		457197E6213D242300ACA58A /* SkyborgWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				457197E7213D242300ACA58A /* InterfaceController.swift */,
+				457197E9213D242300ACA58A /* ExtensionDelegate.swift */,
+				457197EB213D242300ACA58A /* Assets.xcassets */,
+				457197ED213D242300ACA58A /* Info.plist */,
+			);
+			path = "SkyborgWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		457197C0213D241F00ACA58A /* SkyborgWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 457197F8213D242300ACA58A /* Build configuration list for PBXNativeTarget "SkyborgWatch" */;
+			buildPhases = (
+				457197BD213D241F00ACA58A /* Sources */,
+				457197BE213D241F00ACA58A /* Frameworks */,
+				457197BF213D241F00ACA58A /* Resources */,
+				457197F7213D242300ACA58A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				457197D6213D242200ACA58A /* PBXTargetDependency */,
+			);
+			name = SkyborgWatch;
+			productName = SkyborgWatch;
+			productReference = 457197C1213D242000ACA58A /* SkyborgWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		457197D2213D242200ACA58A /* SkyborgWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 457197F4213D242300ACA58A /* Build configuration list for PBXNativeTarget "SkyborgWatch WatchKit App" */;
+			buildPhases = (
+				457197D1213D242200ACA58A /* Resources */,
+				457197F3213D242300ACA58A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				457197E5213D242300ACA58A /* PBXTargetDependency */,
+			);
+			name = "SkyborgWatch WatchKit App";
+			productName = "SkyborgWatch WatchKit App";
+			productReference = 457197D3213D242200ACA58A /* SkyborgWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		457197E1213D242300ACA58A /* SkyborgWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 457197F0213D242300ACA58A /* Build configuration list for PBXNativeTarget "SkyborgWatch WatchKit Extension" */;
+			buildPhases = (
+				457197DE213D242300ACA58A /* Sources */,
+				457197DF213D242300ACA58A /* Frameworks */,
+				457197E0213D242300ACA58A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SkyborgWatch WatchKit Extension";
+			productName = "SkyborgWatch WatchKit Extension";
+			productReference = 457197E2213D242300ACA58A /* SkyborgWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		457197B9213D241F00ACA58A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = BJN;
+				TargetAttributes = {
+					457197C0213D241F00ACA58A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					457197D2213D242200ACA58A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					457197E1213D242300ACA58A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 457197BC213D241F00ACA58A /* Build configuration list for PBXProject "SkyborgWatch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 457197B8213D241F00ACA58A;
+			productRefGroup = 457197C2213D242000ACA58A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				457197C0213D241F00ACA58A /* SkyborgWatch */,
+				457197D2213D242200ACA58A /* SkyborgWatch WatchKit App */,
+				457197E1213D242300ACA58A /* SkyborgWatch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		457197BF213D241F00ACA58A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457197CF213D242100ACA58A /* LaunchScreen.storyboard in Resources */,
+				457197CC213D242100ACA58A /* Assets.xcassets in Resources */,
+				457197CA213D242000ACA58A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457197D1213D242200ACA58A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457197DC213D242200ACA58A /* Assets.xcassets in Resources */,
+				457197DA213D242200ACA58A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457197E0213D242300ACA58A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457197EC213D242300ACA58A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		457197BD213D241F00ACA58A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457197C7213D242000ACA58A /* ViewController.swift in Sources */,
+				457197C5213D242000ACA58A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457197DE213D242300ACA58A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457197EA213D242300ACA58A /* ExtensionDelegate.swift in Sources */,
+				457197E8213D242300ACA58A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		457197D6213D242200ACA58A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 457197D2213D242200ACA58A /* SkyborgWatch WatchKit App */;
+			targetProxy = 457197D5213D242200ACA58A /* PBXContainerItemProxy */;
+		};
+		457197E5213D242300ACA58A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 457197E1213D242300ACA58A /* SkyborgWatch WatchKit Extension */;
+			targetProxy = 457197E4213D242300ACA58A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		457197C8213D242000ACA58A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				457197C9213D242000ACA58A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		457197CD213D242100ACA58A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				457197CE213D242100ACA58A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		457197D8213D242200ACA58A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				457197D9213D242200ACA58A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		457197EE213D242300ACA58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		457197EF213D242300ACA58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		457197F1213D242300ACA58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SkyborgWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bjn.SkyborgWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		457197F2213D242300ACA58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SkyborgWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bjn.SkyborgWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		457197F5213D242300ACA58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = SkyborgWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "SkyborgWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = bjn.SkyborgWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		457197F6213D242300ACA58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = SkyborgWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "SkyborgWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = bjn.SkyborgWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		457197F9213D242300ACA58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyborgWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bjn.SkyborgWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		457197FA213D242300ACA58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyborgWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bjn.SkyborgWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		457197BC213D241F00ACA58A /* Build configuration list for PBXProject "SkyborgWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457197EE213D242300ACA58A /* Debug */,
+				457197EF213D242300ACA58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		457197F0213D242300ACA58A /* Build configuration list for PBXNativeTarget "SkyborgWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457197F1213D242300ACA58A /* Debug */,
+				457197F2213D242300ACA58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		457197F4213D242300ACA58A /* Build configuration list for PBXNativeTarget "SkyborgWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457197F5213D242300ACA58A /* Debug */,
+				457197F6213D242300ACA58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		457197F8213D242300ACA58A /* Build configuration list for PBXNativeTarget "SkyborgWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457197F9213D242300ACA58A /* Debug */,
+				457197FA213D242300ACA58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 457197B9213D241F00ACA58A /* Project object */;
+}

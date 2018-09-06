@@ -10,13 +10,21 @@ import WatchKit
 import Foundation
 
 
+
 class InterfaceController: WKInterfaceController {
 
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         // Configure interface objects here.
     }
+    func startOfDay() -> Int64{
+        let date = Date()
+        let startOfDay = Calendar.current.startOfDay(for: date)
+        let since1970 = startOfDay.timeIntervalSince1970;
+        return Int64(since1970)
+    }
+    
     func currentTimeMiliseconds() -> Int64 {
         let currentDate = Date();
         let since1970 = currentDate.timeIntervalSince1970;
@@ -36,7 +44,6 @@ class InterfaceController: WKInterfaceController {
 
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-
         var session = URLSession.shared
 
         //authozire/
@@ -83,7 +90,7 @@ class InterfaceController: WKInterfaceController {
 
                                             var parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
                                             var responseData = parsedData["data"] as! [[String:Any]]
-                                            let orderRequestUrl:String = "https://staging.skyborg.io:8043/api/orders/stats/beginDate:1536008400%7cendDate:" + String(self.currentTimeMiliseconds()) + "%7ctimeSet:s"
+                                            let orderRequestUrl:String = "https://staging.skyborg.io:8043/api/orders/stats/beginDate:" + String(self.startOfDay()) + "%7cendDate:" + String(self.currentTimeMiliseconds()) + "%7ctimeSet:s"
                                             
                                             request = URLRequest(url: URL(string: orderRequestUrl)!)
                                             request.httpMethod = "GET"

@@ -1,8 +1,8 @@
 //
-//  InterfaceController.swift
+//  ThirdCardInterfaceController.swift
 //  SkyborgWatch WatchKit Extension
 //
-//  Created by BJN on 9/3/18.
+//  Created by BJN on 9/20/18.
 //  Copyright © 2018 BJN. All rights reserved.
 //
 
@@ -10,15 +10,13 @@ import WatchKit
 import Foundation
 
 
+class ThirdCardInterfaceController: WKInterfaceController {
 
-class InterfaceController: WKInterfaceController {
-
+    @IBOutlet var orders: WKInterfaceLabel!
+    @IBOutlet var units: WKInterfaceLabel!
+    @IBOutlet var sales: WKInterfaceLabel!
+    @IBOutlet var profit: WKInterfaceLabel!
     
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        // Configure interface objects here.
-        
-    }
     func startOfDay() -> Int64{
         let date = Date()
         let startOfDay = Calendar.current.startOfDay(for: date)
@@ -31,25 +29,22 @@ class InterfaceController: WKInterfaceController {
         let since1970 = currentDate.timeIntervalSince1970;
         return Int64(since1970)
     }
-    @IBOutlet var orders: WKInterfaceLabel!
-    @IBOutlet var units: WKInterfaceLabel!
-    @IBOutlet var sales: WKInterfaceLabel!
-    @IBOutlet var profit: WKInterfaceLabel!
-    @IBOutlet var SecondScreenOrders: WKInterfaceLabel!
-    @IBAction func testChange(_ value: Bool) {
-    }
     
-    @IBAction func switchChange(_ value: Bool) {
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+        let startOfWeek = (self.startOfDay() - (24*60*60*14))
+        // Configure interface objects here.
         var request = URLRequest(url: URL(string: "https://staging.skyborg.io:8043/api/users/authorize")!)
         request.httpMethod = "POST"
         var params = ["email":"vlad_stefan95@yahoo.com", "password":"passw0rd#"] as Dictionary<String, String>
-
+        
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-
+        
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         var session = URLSession.shared
-
+        
         //authozire/
         session.dataTask(with: request) {data, response, err in
             if err != nil {
@@ -58,19 +53,19 @@ class InterfaceController: WKInterfaceController {
                 do {
                     var parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
                     var responseData = parsedData["data"] as! [String:Any]
-
+                    
                     let clientId = responseData["clientId"]
                     let clientSecret = responseData["clientSecret"]
-
+                    
                     //token/
                     request = URLRequest(url: URL(string: "https://staging.skyborg.io:8043/api/oauth/token")!)
                     request.httpMethod = "POST"
                     params = ["grant_type":"password", "username":"vlad_stefan95@yahoo.com","password":"passw0rd#", "client_id":clientId, "client_secret":clientSecret] as! Dictionary<String, String>
-
+                    
                     request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-
+                    
                     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
+                    
                     session = URLSession.shared
                     session.dataTask(with: request) {data, response, err in
                         if err != nil {
@@ -79,10 +74,10 @@ class InterfaceController: WKInterfaceController {
                             do {
                                 var parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
                                 var accessToken = parsedData["access_token"] as! String
-
+                                
                                 request = URLRequest(url: URL(string: "https://staging.skyborg.io:8043/api/organizations")!)
                                 request.httpMethod = "GET"
-
+                                
                                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                                 request.addValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
                                 session = URLSession.shared
@@ -91,10 +86,10 @@ class InterfaceController: WKInterfaceController {
                                         print(err)
                                     } else {
                                         do {
-
+                                            
                                             var parsedData = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
                                             var responseData = parsedData["data"] as! [[String:Any]]
-                                            let orderRequestUrl:String = "https://staging.skyborg.io:8043/api/orders/stats/beginDate:" + String(self.startOfDay()) + "%7cendDate:" + String(self.currentTimeMiliseconds()) + "%7ctimeSet:s"
+                                            let orderRequestUrl:String = "https://staging.skyborg.io:8043/api/orders/stats/beginDate:" + String(startOfWeek) + "%7cendDate:" + String(self.startOfDay() ) + "%7ctimeSet:s"
                                             
                                             request = URLRequest(url: URL(string: orderRequestUrl)!)
                                             request.httpMethod = "GET"
@@ -135,28 +130,26 @@ class InterfaceController: WKInterfaceController {
                                         }
                                     }
                                     }.resume()
-
-                                } catch let error as NSError {
-                                    print(error)
-                                }
+                                
+                            } catch let error as NSError {
+                                print(error)
                             }
-                    }.resume()
+                        }
+                        }.resume()
                 } catch let error as NSError {
                     print(error)
                 }
             }
-
+            
             }.resume()
 
-        
     }
-    @IBOutlet var textLabel: WKInterfaceLabel!
-    
+
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-    
+
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()

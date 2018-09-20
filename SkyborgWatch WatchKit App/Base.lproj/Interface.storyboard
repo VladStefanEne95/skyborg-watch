@@ -37,9 +37,59 @@
                         <outlet property="profit" destination="Z3P-nG-nSn" id="A5h-ov-xJ1"/>
                         <outlet property="sales" destination="Gw3-EZ-2nv" id="PDk-8K-YC9"/>
                         <outlet property="units" destination="MS1-P3-JZE" id="Yyh-D2-ES2"/>
+                        <segue destination="2u0-K9-WN4" kind="relationship" relationship="nextPage" id="EJL-Du-9gA"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="-391" y="228"/>
+        </scene>
+        <!--Second Card Interface Controller-->
+        <scene sceneID="NHW-Fh-bHY">
+            <objects>
+                <controller id="2u0-K9-WN4" customClass="SecondCardInterfaceController" customModule="SkyborgWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Orders" id="YzF-BQ-FnR"/>
+                        <label width="136" alignment="left" text="Units" id="suG-ws-xfx"/>
+                        <label width="136" alignment="left" text="Sales" id="1jR-by-W3Z"/>
+                        <label width="136" alignment="left" text="Profit" id="o2j-jC-JeH"/>
+                    </items>
+                    <connections>
+                        <outlet property="orders" destination="YzF-BQ-FnR" id="Tf6-po-iEe"/>
+                        <outlet property="profit" destination="o2j-jC-JeH" id="DRW-0d-mcT"/>
+                        <outlet property="sales" destination="1jR-by-W3Z" id="adb-9p-tSm"/>
+                        <outlet property="units" destination="suG-ws-xfx" id="9HI-0n-OZE"/>
+                        <segue destination="qSJ-oi-xPc" kind="relationship" relationship="nextPage" id="Mbr-ch-a4M"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-96" y="228"/>
+        </scene>
+        <!--Third Card Interface Controller-->
+        <scene sceneID="SbH-tG-6Be">
+            <objects>
+                <controller id="qSJ-oi-xPc" customClass="ThirdCardInterfaceController" customModule="SkyborgWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Orders" id="Mhk-PU-H5o"/>
+                        <label width="136" alignment="left" text="Units" id="tPI-Cu-Wth"/>
+                        <label width="136" alignment="left" text="Sales" id="qkb-lS-a1V"/>
+                        <label width="136" alignment="left" text="Profit" id="sbl-Fw-hZ0"/>
+                    </items>
+                    <connections>
+                        <outlet property="orders" destination="Mhk-PU-H5o" id="yQD-Wb-rfa"/>
+                        <outlet property="profit" destination="sbl-Fw-hZ0" id="Qi7-uz-uSn"/>
+                        <outlet property="sales" destination="qkb-lS-a1V" id="LSO-Du-WYF"/>
+                        <outlet property="units" destination="tPI-Cu-Wth" id="Nef-vK-Tar"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="168" y="228"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Hts-Gq-P2D">
+            <objects>
+                <controller id="Kwa-x7-mA1"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="228"/>
         </scene>
     </scenes>
 </document>

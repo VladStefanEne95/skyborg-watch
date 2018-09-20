@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4526DEB12153B28B00C78D1B /* SecondCardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526DEB02153B28B00C78D1B /* SecondCardInterfaceController.swift */; };
+		4526DEB32153B8C600C78D1B /* ThirdCardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526DEB22153B8C600C78D1B /* ThirdCardInterfaceController.swift */; };
 		457197C5213D242000ACA58A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457197C4213D242000ACA58A /* AppDelegate.swift */; };
 		457197C7213D242000ACA58A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457197C6213D242000ACA58A /* ViewController.swift */; };
 		457197CA213D242000ACA58A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457197C8213D242000ACA58A /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4526DEB02153B28B00C78D1B /* SecondCardInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCardInterfaceController.swift; sourceTree = "<group>"; };
+		4526DEB22153B8C600C78D1B /* ThirdCardInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCardInterfaceController.swift; sourceTree = "<group>"; };
 		457197C1213D242000ACA58A /* SkyborgWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyborgWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457197C4213D242000ACA58A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457197C6213D242000ACA58A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		457197E6213D242300ACA58A /* SkyborgWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4526DEB02153B28B00C78D1B /* SecondCardInterfaceController.swift */,
+				4526DEB22153B8C600C78D1B /* ThirdCardInterfaceController.swift */,
 				457197E7213D242300ACA58A /* InterfaceController.swift */,
 				457197E9213D242300ACA58A /* ExtensionDelegate.swift */,
 				457197EB213D242300ACA58A /* Assets.xcassets */,
@@ -295,8 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4526DEB12153B28B00C78D1B /* SecondCardInterfaceController.swift in Sources */,
 				457197EA213D242300ACA58A /* ExtensionDelegate.swift in Sources */,
 				457197E8213D242300ACA58A /* InterfaceController.swift in Sources */,
+				4526DEB32153B8C600C78D1B /* ThirdCardInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
